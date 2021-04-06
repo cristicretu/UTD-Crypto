@@ -14,7 +14,6 @@ function App() {
       )
       .then(res => {
         setCoins(res.data);
-        console.log(res.data);
       })
       .catch(error => console.log(error));
   }, []);
@@ -36,9 +35,11 @@ function App() {
             className='coin-input'
             type='text'
             onChange={handleChange}
-            placeholder='Search'
+            placeholder='Search here'
           />
         </form>
+
+        {/* now the coin components */}
       </div>
       {filteredCoins.map(coin => {
         return (
