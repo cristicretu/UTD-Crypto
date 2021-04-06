@@ -3,6 +3,7 @@ import './Coin.css'
 
 const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => {
   return (
+
     <div className="coin-container">
       <div className="coin-row">
         <div className="coin">
@@ -16,9 +17,10 @@ const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => 
           <p className="coin-volume">€{volume.toLocaleString()}</p>
           {priceChange < 0 ? (
             <p className="coin-percent red">{priceChange.toFixed(2)}%</p>
-            )
+
+          )
             :
-            ( <p className="coin-percent green">{priceChange.toFixed(2)}%</p> 
+            ( <p className="coin-percent green">{priceChange.toFixed(2)}%</p>
             )
           }
           <p className="coin-market cap">
@@ -29,5 +31,6 @@ const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => 
     </div>
   )
 }
+
 
 export default Coin
